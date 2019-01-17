@@ -1,9 +1,6 @@
-{% extends 'layout.html' %} {% block head %}
-<!-- LOCAL -->
-<link rel="stylesheet" href="/static/css/style.css" /> {% endblock %} {% block
-body %}
-<div class="container">
-  <h2 class="col-md-12 text-center">Sales Data Visiualizer</h2>
+{% extends 'layout.html' %} {% block body %}
+<h2 class="col-md-12 text-center text-title">Sale Orders Data Visiualizer</h2>
+<div class="col-md-7">
   <svg width="960" height="600" id="statesvg"></svg>
   <div id="tooltip"></div>
 </div>

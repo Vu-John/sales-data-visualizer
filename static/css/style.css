@@ -46,3 +46,14 @@
   text-align: center;
   color: white;
 }
+
+/* Custom Styling */
+.text-title {
+  margin-bottom: 50px;
+}
+.table-wrapper-scroll-y {
+  display: block;
+  max-height: 800px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

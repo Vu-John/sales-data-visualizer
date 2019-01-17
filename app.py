@@ -12,5 +12,10 @@ def index():
     return render_template('index.html', orders=sale_orders)
 
 
+@app.route('/orders')
+def orders():
+    return render_template('orders.html', orders=sale_orders)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
