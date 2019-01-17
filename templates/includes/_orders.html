@@ -1,0 +1,28 @@
+<div class="customer-table-container">
+  <div class="table-wrapper-scroll-y">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Order Amount</th>
+          <th scope="col">Street</th>
+          <th scope="col">Street 2</th>
+          <th scope="col">City</th>
+          <th scope="col">Country</th>
+          <th scope="col">State</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for order in orders %}
+        <tr>
+          <td>{{ order.order_amount }}</td>
+          <td>{{ order.street }}</td>
+          <td>{{ order.street2 }}</td>
+          <td>{{ order.city }}</td>
+          <td>{{ order.country }}</td>
+          <td>{{ order.state }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
