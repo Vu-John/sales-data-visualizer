@@ -1,7 +1,21 @@
-{% extends 'layout.html' %} {% block body %}
-<div>
+{% extends 'layout.html' %} {% block head %}
+<!-- LOCAL -->
+<link rel="stylesheet" href="/static/css/style.css" /> {% endblock %} {% block
+body %}
+<div class="container">
   <h2 class="col-md-12 text-center">Sales Data Visiualizer</h2>
   <svg width="960" height="600" id="statesvg"></svg>
   <div id="tooltip"></div>
 </div>
+{% endblock %} {% block scripts %}
+<!-- D3.js -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<!-- LOCAL -->
+<script type="text/javascript" src="/static/js/uStates.js"></script>
+<script type="text/javascript" src="/static/js/tooltip.js"></script>
+<!-- Pass Flask data to JS -->
+<script type="text/javascript">
+  var orders = JSON.parse(`{{ orders | tojson }}`);
+  drawMap(orders);
+</script>
 {% endblock %}
