@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>ACME Inc. - Sales Data Visualizer</title>
-        <!-- LOCAL -->
-        <link rel="stylesheet" href="/static/css/style.css" />
-    </haed>
-    <body>
-      <h1>ACME Inc.</h1>
-      <div id="tooltip"></div><!-- div to hold tooltip. -->
-      <svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
-
-      <!-- HOSTED -->
-      <script src="http://d3js.org/d3.v3.min.js"></script>
-      <!-- LOCAL -->
-      <script type="text/javascript" src="/static/js/uStates.js"></script>
-      <script type="text/javascript" src="/static/js/tooltip.js"></script>
-    </body>
-</html>
+{% extends 'layout.html' %} {% block body %}
+<div>
+  <h2 class="col-md-12 text-center">Sales Data Visiualizer</h2>
+  <svg width="960" height="600" id="statesvg"></svg>
+  <div id="tooltip"></div>
+</div>
+{% endblock %}
