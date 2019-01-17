@@ -8,12 +8,12 @@ app = Flask(__name__, static_url_path='/static')
 sale_orders = sale_orders_data()
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
     return render_template('index.html', orders=sale_orders)
 
 
-@app.route('/orders')
+@app.route('/orders', methods=['GET'])
 def orders():
     return render_template('orders.html', orders=sale_orders)
 
