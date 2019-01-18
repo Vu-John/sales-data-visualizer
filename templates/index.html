@@ -1,9 +1,7 @@
 {% extends 'layout.html' %} {% block body %}
 <h2 class="col-md-12 text-center text-title">Sale Orders Data Visiualizer</h2>
-<div class="container">
-  <div class="col-md-12 map-container">
-    <svg width="960" height="600" id="statesvg"></svg>
-  </div>
+<div class="map-container">
+  <svg width="960" height="600" id="statesvg"></svg>
 </div>
 <div id="tooltip"></div>
 <div class="col-md-12">{% include 'includes/_orders.html' %}</div>
